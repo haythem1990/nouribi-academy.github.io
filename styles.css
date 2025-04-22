@@ -52,6 +52,9 @@ main {
     transition: transform 0.3s ease;
     position: relative; /* Allow absolute positioning for text */
     overflow: hidden; /* Ensure the card has a clean edge */
+    display: flex; /* Use Flexbox for vertical alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push content to top and bottom */
 }
 
 .card:hover {
