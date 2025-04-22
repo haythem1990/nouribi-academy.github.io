@@ -44,18 +44,17 @@ main {
 
 /* Card Styles */
 .card {
-    flex-basis: calc(33% - 2rem); /* 33% width with gaps */
+    flex-basis: calc(33% - 2rem);
     background-color: white;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    position: relative; /* Allow absolute positioning for text */
-    overflow: hidden; /* Ensure the card has a clean edge */
+    position: relative;
+    overflow: visible; /* ← this is important */
 }
 
-.card:hover {
-    transform: scale(1.05); /* Slightly zoom in on hover */
+.card:hover .hidden-content {
+    display: block;
 }
 
 .card img {
