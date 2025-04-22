@@ -69,7 +69,7 @@ main {
     padding: 1rem;
     color: black; /* Text color */
     font-size: 1.5rem;
-    text-align: center; /* Center the title text */
+    text-align: left; /* Align text to the left */
 }
 
 /* Hidden Content Styling */
