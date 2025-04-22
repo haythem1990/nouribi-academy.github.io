@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset some default styles */
 * {
     margin: 0;
@@ -52,6 +50,8 @@ main {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    position: relative; /* Allow absolute positioning for text */
+    overflow: hidden; /* Ensure the card has a clean edge */
 }
 
 .card:hover {
@@ -62,13 +62,53 @@ main {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover; /* Ensure the image fills the card while maintaining aspect ratio */
 }
 
 .card h2 {
-    padding: 1rem;
-    color: #333;
+    position: absolute; /* Position the text absolutely within the card */
+    bottom: 0; /* Align the text at the bottom of the card */
+    left: 0; /* Align the text to the left edge of the card */
+    right: 0; /* Stretch the text to fill the full width of the card */
+    padding: 1rem; /* Add padding for better readability */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text visibility */
+    color: white; /* White text for contrast */
     font-size: 1.5rem;
-    text-align: center;
+    text-align: center; /* Center the title text */
+}
+
+/* Hidden Content Styling */
+.hidden-content {
+    position: absolute;
+    top: 100%; /* Place the content below the card */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    list-style-type: none; /* Remove bullet points from the list */
+    display: none; /* Hide by default */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card:hover .hidden-content {
+    display: block; /* Show the hidden content on hover */
+}
+
+.card:hover h2 {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        gap: 1rem; /* Reduce spacing between cards */
+    }
+
+    .card {
+        flex-basis: 100%; /* Make cards take full width on small screens */
+    }
 }
 
 /* Footer */
