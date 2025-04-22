@@ -67,10 +67,10 @@ main {
 
 .card h2 {
     position: absolute; /* Position the text absolutely within the card */
-    bottom: 0; /* Align the text at the bottom of the card */
-    left: 0; /* Align the text to the left edge of the card */
-    right: 0; /* Stretch the text to fill the full width of the card */
-    padding: 1rem; /* Add padding for better readability */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Fine-tune centering */
+    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text visibility */
     color: white; /* White text for contrast */
     font-size: 1.5rem;
