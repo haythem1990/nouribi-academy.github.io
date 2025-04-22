@@ -47,15 +47,18 @@ main {
     flex-basis: calc(33% - 2rem); /* 33% width with gaps */
     background-color: white;
     border-radius: 8px;
-    overflow: visible; /* Ensure hidden content isn't clipped */
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
     position: relative; /* Allow absolute positioning for text */
+    overflow: hidden; /* Ensure the card has a clean edge */
+    display: flex; /* Use Flexbox for vertical alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push content to top and bottom */
 }
 
 .card:hover {
     transform: scale(1.05); /* Slightly zoom in on hover */
-    background-color: #f0f0f0; /* Subtle background change on hover */
 }
 
 .card img {
@@ -72,27 +75,26 @@ main {
     text-align: center; /* Center the title text */
 }
 
-/* Course Links */
-.course-link {
-    display: block;
-    padding: 0.5rem;
-    color: #007bff; /* Blue link color */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.course-link:hover {
-    color: #0056b3; /* Darker blue on hover */
-}
-
-/* More Info Content */
-.more-info {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
+/* Hidden Content Styling */
+.hidden-content {
+    position: absolute;
+    top: 100%; /* Place the content below the card */
+    left: 0;
+    width: 100%;
+    background-color: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    display: none; /* Initially hidden */
+    padding: 1rem;
+    list-style-type: none; /* Remove bullet points from the list */
+    display: none; /* Hide by default */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card:hover .hidden-content {
+    display: block; /* Show the hidden content on hover */
+}
+
+.card:hover h2 {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
 }
 
 /* Responsive Design */
