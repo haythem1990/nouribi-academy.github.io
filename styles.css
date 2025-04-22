@@ -44,17 +44,18 @@ main {
 
 /* Card Styles */
 .card {
-    flex-basis: calc(33% - 2rem);
+    flex-basis: calc(33% - 2rem); /* 33% width with gaps */
     background-color: white;
     border-radius: 8px;
+    overflow: visible; /* Ensure hidden content isn't clipped */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    position: relative;
-    overflow: visible; /* ← this is important */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative; /* Allow absolute positioning for text */
 }
 
-.card:hover .hidden-content {
-    display: block;
+.card:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    background-color: #f0f0f0; /* Subtle background change on hover */
 }
 
 .card img {
@@ -83,6 +84,7 @@ main {
     list-style-type: none; /* Remove bullet points from the list */
     display: none; /* Hide by default */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for visibility */
 }
 
 .card:hover .hidden-content {
