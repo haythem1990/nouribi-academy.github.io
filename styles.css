@@ -1,77 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+}
+
+/* Header */
 header {
-    background-color: #004d99;
+    background-color: #007bff;
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 2rem 0;
 }
 
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Main Content */
 main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
 }
 
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.cards-container {
+/* Grid Container */
+.grid-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    gap: 2rem; /* Space between cards */
+    justify-content: space-between;
 }
 
+/* Card Styles */
 .card {
-    flex-basis: calc(33% - 2rem);
+    flex-basis: calc(33% - 2rem); /* 33% width with gaps */
     background-color: white;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    position: relative;
-    overflow: visible; /* Allow content to overflow if needed */
-    padding-bottom: 1rem;
-    min-height: 250px; /* Prevents jumpy resizing */
+    position: relative; /* Allow absolute positioning for text */
+    overflow: hidden; /* Ensure the card has a clean edge */
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05); /* Slightly zoom in on hover */
 }
 
-.card h3 {
-    margin: 0;
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure the image fills the card while maintaining aspect ratio */
+}
+
+.card h2 {
     padding: 1rem;
-    font-size: 1.25rem;
-    color: #004d99;
+    color: black; /* Text color */
+    font-size: 1.5rem;
+    text-align: center; /* Center the title text */
 }
 
+/* Hidden Content Styling */
 .hidden-content {
-    display: none;
-    padding: 0 1rem 1rem 1rem;
-    color: #333;
+    position: absolute;
+    top: 100%; /* Place the content below the card */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    list-style-type: none; /* Remove bullet points from the list */
+    display: none; /* Hide by default */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .card:hover .hidden-content {
-    display: block;
+    display: block; /* Show the hidden content on hover */
 }
 
-ul {
-    margin: 0;
-    padding-left: 1.2rem;
+.card:hover h2 {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
 }
 
-li {
-    margin-bottom: 0.5rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        gap: 1rem; /* Reduce spacing between cards */
+    }
+
+    .card {
+        flex-basis: 100%; /* Make cards take full width on small screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #555;
 }
