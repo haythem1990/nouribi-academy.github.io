@@ -421,10 +421,21 @@ footer {
 .modern-link:hover::after {
     width: 100%;
 }
-.course-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+  /* Existing styles... */
+
+.course-image-container {
+    text-align: right;
+    margin-top: 40px;
+  }
+
+  .course-image {
+    width: 300px; /* adjust size as needed */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .course-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  }
