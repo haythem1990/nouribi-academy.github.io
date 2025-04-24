@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LDO (Low Dropout Regulator) Course - Learn about LDOs, their characteristics, and how to design an efficient LDO regulator.">
+    <title>LDO Course - Low Dropout Regulators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .important {
+            color: #f44336;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .price {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <h1>LDO Course: Understanding Low Dropout Regulators</h1>
+</header>
+
+<section>
+    <h2>Introduction</h2>
+    <p>In this course, we will explore the workings of the Low Dropout Regulator (LDO). LDOs are essential components in many power supplies, offering a simple solution for stepping down voltage in systems where low dropout and efficiency are important.</p>
+    
+    <h3>What is an LDO?</h3>
+    <p>An LDO is a type of linear voltage regulator that provides a stable output voltage with a small difference between the input and output voltages, known as the <strong>dropout voltage</strong>. This allows LDOs to be more efficient and generate less heat in low-power applications.</p>
+    
+    <h2>Key Characteristics of LDOs</h2>
+    <ul>
+        <li><strong>Input and Output Voltages:</strong> The input voltage must be higher than the output voltage by at least the dropout voltage for proper operation.</li>
+        <li><strong>Dropout Voltage:</strong> The minimum voltage difference between the input and output required for stable regulation.</li>
+        <li><strong>ESR (Equivalent Series Resistance):</strong> Affects stability and performance. Choose capacitors with low ESR for better noise rejection and stability.</li>
+        <li><strong>DC Bias:</strong> The voltage applied across the capacitor. It can affect the capacitance, especially in ceramic capacitors.</li>
+        <li><strong>Power Dissipation:</strong> As a linear regulator, the LDO generates heat. The power dissipation depends on the difference between the input and output voltages and the current passing through.</li>
+        <li><strong>PSRR (Power Supply Rejection Ratio):</strong> How well the LDO rejects noise from the input supply. A higher PSRR is essential in noise-sensitive applications.</li>
+        <li><strong>Inrush Current:</strong> The surge current when the LDO is first turned on. Managing inrush current is critical for stable operation.</li>
+    </ul>
+
+    <h2>Course Learning Outcomes</h2>
+    <p>By the end of this course, you'll have the confidence and knowledge to design a highly efficient and reliable LDO regulator for your projects.</p>
+
+<section>
+      <h2>Price of the Course:</h2>
+      <p><strong>For Self-Learning:</strong> 50€</p>
+      <p><strong>For Private Appointment (One-on-One):</strong> 100€</p>
+    </section>
+
+    <!-- Back to Home Link -->
+    <a href="index.html">← Back to Home</a>
+  </main>
+   <!-- Course Image at the end -->
+    <div class="course-image-container">
+      <img src="LDO-Circuits.jpg" alt="DC-DC Boost Converter Diagram" class="course-image">
+    </div>
+  <!-- Footer -->
+<footer>
+    <p>&copy; 2025 Nouribi Academy | All Rights Reserved</p>
+</footer>
+</body>
+</html>
