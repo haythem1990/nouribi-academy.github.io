@@ -439,17 +439,6 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
   }
-.card .hidden-content {
-    display: none;
-    position: absolute;
-    top: 100%; /* Show below the card */
-    left: 0;
-    z-index: 10;
-    background-color: white;
-    padding: 1em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover .hidden-content {
-    display: block;
+.contact-section {
+    margin-top: 120px; /* increase if needed */
 }
