@@ -50,7 +50,7 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;
-    overflow: visible; /* ← this is important */
+    overflow: hidden; /* Avoid overflow */
 }
 
 .card:hover .hidden-content {
@@ -66,9 +66,9 @@ main {
 
 .card h2 {
     padding: 1rem;
-    color: black; /* Text color */
+    color: black;
     font-size: 1.5rem;
-    text-align: center; /* Center the title text */
+    text-align: center;
 }
 
 /* Hidden Content Styling */
@@ -80,9 +80,9 @@ main {
     background-color: white;
     border: 1px solid #ddd;
     padding: 1rem;
-    list-style-type: none; /* Remove bullet points from the list */
+    list-style-type: none;
     display: none; /* Hide by default */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover .hidden-content {
@@ -113,13 +113,14 @@ footer {
     font-size: 0.9rem;
     color: #555;
 }
+
 /* Form Section Styles */
 .contact-section {
     margin-top: 4rem;
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -182,6 +183,7 @@ footer {
 .nouribi-form button:hover {
     background-color: #0056b3;
 }
+
 /* Modern Link Style for Course List */
 .modern-link {
     color: #1a1a1a;
@@ -199,7 +201,7 @@ footer {
     bottom: -2px;
     width: 0%;
     height: 2px;
-    background-color: #6366f1; /* Indigo - modern feel */
+    background-color: #6366f1;
     transition: width 0.3s ease;
 }
 
