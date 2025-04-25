@@ -41,6 +41,14 @@ main {
     gap: 2rem; /* Space between cards */
     justify-content: space-between;
 }
+/* Optional Vertical Stack for Special Section */
+.vertical-stack {
+    flex-direction: column;
+    align-items: center;
+}
+.vertical-stack .card + .card {
+    margin-top: 2rem;
+}
 
 /* Card Styles */
 .card {
