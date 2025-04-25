@@ -243,8 +243,9 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    position: relative;
-    overflow: visible; /* ← this is important */
+    position: relative;  /* Allows hidden content to be positioned inside the card */
+    overflow: visible; /* Ensure hidden content can be shown */
+    z-index: 1; /* Make sure card itself stays below the hidden content */
 }
 
 .card:hover .hidden-content {
@@ -268,15 +269,16 @@ main {
 /* Hidden Content Styling */
 .hidden-content {
     position: absolute;
-    top: 100%; /* Place the content below the card */
+    top: 100%; /* Positions hidden content directly below the card */
     left: 0;
     width: 100%;
     background-color: white;
     border: 1px solid #ddd;
     padding: 1rem;
-    list-style-type: none; /* Remove bullet points from the list */
+    list-style-type: none;
     display: none; /* Hide by default */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the hidden content */
+    z-index: 2; /* Ensure it appears above the card */
 }
 
 .card:hover .hidden-content {
