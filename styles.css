@@ -377,7 +377,3 @@ footer {
 .contact-section {
     margin-top: 120px; /* increase if needed */
 }
-.card:hover .request-info {
-  opacity: 1;             /* fade in on hover */
-  pointer-events: auto;
-}
